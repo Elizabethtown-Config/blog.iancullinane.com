@@ -11,8 +11,8 @@ node(NODE_LABEL){
 
     stage "Deploy Blog"
     sh "ls -la"
-    sh "docker-compose down"
-    sh "docker-compose pull"
+    sh "docker-compose -f blog.iancullinane.com.yml down"
+    sh "docker-compose -f blog.iancullinane.com.yml pull"
     sh "docker-compose -f blog.iancullinane.com.yml up -d"
 
 }
